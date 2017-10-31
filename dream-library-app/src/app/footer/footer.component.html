@@ -1,3 +1,27 @@
-<div class="navbar navbar-inverse">
-  <p class="lead">Playback is here..</p>
+<div class="navbar navbar-inverse" style='min-height:100px;'>
+  <div class="row">
+    <div class="col-md-2" id="empty" ></div>
+    <div class="col-md-2" id="cover">
+        <img src="{{list[currentSongIndex].cover}}"
+         alt="cover"
+         style="height: 100px;">
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+       <div class="col-md-12" style="color: rgb(121,121,121);">
+          <p class="lead">{{list[currentSongIndex].artist}} - {{list[currentSongIndex].name}}</p>
+       </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button class="btn" (click)='onPlay()'><span class="glyphicon glyphicon-play"></span></button>
+          <button class="btn" (click)='onPause()'><span class="glyphicon glyphicon-pause"></span></button>
+          <button class="btn" (click)='onStop()'><span class="glyphicon glyphicon-stop"></span></button>
+          <button class="btn" (click)='onBackward()'><span class="glyphicon glyphicon-backward"></span></button>
+          <button class="btn" (click)='onForward()'><span class="glyphicon glyphicon-forward"></span></button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

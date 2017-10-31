@@ -1,3 +1,30 @@
-<p>
-  library works!
-</p>
+<div class="row">
+  <div class="col-md-8">
+    <!-- <form>
+      <div class="form-group">
+        <label for="search">Search song</label>
+        <input type="text" placeholder="search" name='search'>
+      </div>
+    </form> -->
+    <div class="row">
+      <div class="col-md-12" >
+        <ul>
+          <li class="list-item" *ngFor='let song of library'>
+            <p class="lead">
+              <button (click)='onPlay(song.id)' 
+              class="btn">
+              <span class="glyphicon glyphicon-play">
+                </span>
+              </button> {{song.artist}} - {{song.name}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="row">
+      <app-song-details></app-song-details>
+    </div>
+  </div>
+</div>
